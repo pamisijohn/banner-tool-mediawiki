@@ -1,12 +1,31 @@
-# React + Vite
+# MediaWiki Banner Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic tool that simplifies the creation of MediaWiki banners. With this app, you can design banners by adjusting text, colors, dimensions, and uploading an image, all with a live preview that updates instantly without reloading the page.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+MediaWiki Banner Creator enables Wikimedia community members to create customized banners that meet design and content standards. Whether you're advertising an event or highlighting important information, this tool helps you craft professional banners with ease.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Live Preview:** Instantly see the changes as you update the banner text, background, and other properties.
+- **Image Upload:** Upload an image to incorporate into your banner. The tool uses a semi-transparent overlay to ensure your text remains legible.
+- **Responsive Design:** Built using best practices, the tool adapts to different screen sizes for optimal viewing.
+- **Code Generation:** Automatically generates the HTML snippet for your banner, ready for integration into MediaWiki pages.
+- **Unit Tested:** Includes unit tests for key components using Jest and React Testing Library.
+
+## Installation
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm (Node Package Manager)
+
+### Steps
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd banner-tool-mediawiki
+   ```

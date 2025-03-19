@@ -15,6 +15,7 @@ function App() {
   });
 
   const updateSettings = (newSettings) => {
+    console.log("Updated banner settings:", newSettings); // Debug log
     setBannerSettings(newSettings);
   };
 

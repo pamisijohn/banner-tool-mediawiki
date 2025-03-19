@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const BannerEditor = ({ bannerSettings, updateSettings }) => {
-  // Update text, colors, dimensions etc.
+  const [imagePreviewUrl, setImagePreviewUrl] = useState(null);
+
+  // Update text, colors, dimensions, etc.
   const handleChange = (e) => {
     const { name, value } = e.target;
     updateSettings({ ...bannerSettings, [name]: value });
@@ -12,9 +14,20 @@ const BannerEditor = ({ bannerSettings, updateSettings }) => {
     const file = e.target.files[0];
     if (file) {
       const imageUrl = URL.createObjectURL(file);
+      setImagePreviewUrl(imageUrl);
+      console.log("Generated image URL:", imageUrl); // Debug log
       updateSettings({ ...bannerSettings, image: imageUrl });
     }
   };
+
+  // Revoke object URL to avoid memory leaks
+  useEffect(() => {
+    return () => {
+      if (imagePreviewUrl) {
+        URL.revokeObjectURL(imagePreviewUrl);
+      }
+    };
+  }, [imagePreviewUrl]);
 
   return (
     <div className="banner-editor">

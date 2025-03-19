@@ -1,29 +1,40 @@
+:root {
+  --bg-color: #f5f5f5;
+  --container-bg: #fff;
+  --container-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --primary-color: #333;
+  --editor-gap: 10px;
+  --editor-margin-bottom: 20px;
+}
+
+/* ------- Base Styles ------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: var(--bg-color);
 }
 
 .container {
   max-width: 900px;
   margin: 20px auto;
   padding: 20px;
-  background: #fff;
+  background: var(--container-bg);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--container-shadow);
 }
 
 h1 {
   text-align: center;
-  color: #333;
+  color: var(--primary-color);
 }
 
+/* ------- Banner Editor ------- */
 .banner-editor {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: var(--editor-gap);
+  margin-bottom: var(--editor-margin-bottom);
 }
 
 .banner-editor label {
@@ -32,10 +43,14 @@ h1 {
   flex-direction: column;
 }
 
+/* ------- Banner Preview ------- */
 .banner-preview {
   margin: 10px 0;
+  position: relative;
+  overflow: hidden; /* Ensures content doesn't overflow */
 }
 
+/* ------- Code Output ------- */
 .code-output {
   margin-top: 20px;
 }
@@ -45,7 +60,14 @@ h1 {
   font-family: monospace;
 }
 
-/* Responsive adjustments */
+/* ------- Dataviz (for charts, if needed) ------- */
+.dataviz {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+/* ------- Responsive Adjustments ------- */
 @media (max-width: 600px) {
   .banner-editor {
     flex-direction: column;
