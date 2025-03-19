@@ -21,7 +21,9 @@ function App() {
 
   return (
     <div className="container">
-      <h1>MediaWiki Banner Creator</h1>
+      <header>
+        <h1>MediaWiki Banner Creator</h1>
+      </header>
       <BannerEditor
         bannerSettings={bannerSettings}
         updateSettings={updateSettings}
