@@ -1,6 +1,8 @@
 # MediaWiki Banner Creator
 
-A dynamic tool that simplifies the creation of MediaWiki banners. With this app, you can design banners by adjusting text, colors, dimensions, and uploading an image, all with a live preview that updates instantly without reloading the page.
+A simple web-based tool to help users create MediaWiki banners with ease. This project was built as part of the **Outreachy Round 30 application process** for the Wikimedia Foundation. The goal is to simplify the creation of banners that follow the CentralNotice format on Wikimedia projects.
+
+With this app, you can design banners by adjusting text, colors, dimensions, and uploading an image, all with a live preview that updates instantly without reloading the page.
 
 ## Overview
 
@@ -14,18 +16,28 @@ MediaWiki Banner Creator enables Wikimedia community members to create customize
 - **Code Generation:** Automatically generates the HTML snippet for your banner, ready for integration into MediaWiki pages.
 - **Unit Tested:** Includes unit tests for key components using Jest and React Testing Library.
 
-## Installation
-
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - npm (Node Package Manager)
 
-### Steps
+## 🔧 Technologies Used
 
-1. **Clone the Repository:**
+- [React](https://reactjs.org/)
+- HTML & CSS
+- JavaScript (ES6+)
+- [Vite](https://vitejs.dev/) (for fast development build)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) + Jest (for unit testing)
+
+---
+
+## 📦 Installation
+
+To run the project locally, follow these steps:
+
+1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone  https://github.com/pamisijohn/banner-tool-mediawiki.git
    cd banner-tool-mediawiki
    ```
